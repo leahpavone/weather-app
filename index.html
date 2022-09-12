@@ -11,26 +11,53 @@
   </head>
   <body>
     <div class="container">
+      <div class="current-date">Monday, January 1st</div>
+      <div class="current-time">12:00 PM</div>
+      <form>
+        <input type="text" placeholder="Enter City" class="location-input" />
+        <button class="find-location-button">Submit</button>
+      </form>
       <div class="content">
-        <div class="current-date">Monday, January 1st</div>
-        <div class="current-time">12:00 PM</div>
-        <div class="current-location">Los Angeles</div>
-        <div class="description">sunny</div>
-        <div class="current-temp">90° F</div>
-        <div class="temp-range-ctr">
-          <div class="temp-min">87° F</div>
-          <div class="temp-max">92° F</div>
+        <div class="unit-buttons">
+          <button class="f-button">°F</button>
+          <button class="c-button">°C</button>
         </div>
-        <img class="temp-icon" src="https://via.placeholder.com/80" />
-
-        <form>
-          <input
-            type="text"
-            placeholder="Enter current location"
-            class="location-input"
-          />
-          <button class="find-location-button">Submit</button>
-        </form>
+        <div class="current-location">City</div>
+        <div class="description-ctr">
+          <div class="description"></div>
+          <img class="temp-icon" src="https://via.placeholder.com/80" />
+        </div>
+        <div class="temp">
+          <div class="current-temp">-°</div>
+          <!-- <div class="temp-unit"></div> -->
+        </div>
+        <div class="temp-range-ctr">
+          <div class="temp-range">
+            <div class="temp-label">Low</div>
+            <div class="temp">
+              <div class="temp-min">-°</div>
+              <!-- <div class="temp-unit"></div> -->
+            </div>
+          </div>
+          <div class="temp-range">
+            <div class="temp-label">High</div>
+            <div class="temp">
+              <div class="temp-max">-°</div>
+              <!-- <div class="temp-unit"></div> -->
+            </div>
+          </div>
+        </div>
+        <div class="sun-outer-ctr">
+          <div class="sun-ctr">
+            <img class="sun-label" src="sunrise.png" alt="Sunrise icon" />
+            <div class="sunrise-time">00:00 AM</div>
+          </div>
+          <div class="sun-div"></div>
+          <div class="sun-ctr">
+            <img class="sun-label" src="sunset.png" alt="Sunset icon" />
+            <div class="sunset-time">00:00 PM</div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>

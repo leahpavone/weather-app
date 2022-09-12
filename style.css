@@ -11,6 +11,9 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: linear-gradient(90deg, #7474bf 10%, #348ac7 90%);
+  height: 100%;
+  width: 100%;
 }
 
 .container {
@@ -24,48 +27,147 @@ body {
 }
 
 .content {
-  background-color: rgb(227, 255, 255);
+  background-color: rgb(227, 255, 255, 0.5);
+  border-radius: 8px;
   width: 600px;
   height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
+  gap: 24px;
+  position: relative;
 }
 
 .current-date {
   /* justify-self: flex-start; */
   font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
 .current-time {
   font-size: 20px;
+  font-weight: 900;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+
+form {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+}
+
+.unit-buttons {
+  position: absolute;
+  display: flex;
+  top: 8px;
+  left: 8px;
+  background-color: aquamarine;
+}
+
+.f-button,
+.c-button {
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.active {
+  background-color: lightcoral;
 }
 
 .current-location {
   font-size: 72px;
 }
 
+.description-ctr {
+  display: flex;
+  align-items: center;
+}
+
 .description {
   font-size: 30px;
 }
 
+.temp-icon {
+  height: 80px;
+  width: 80px;
+}
 .current-temp {
   font-size: 80px;
 }
 .temp-range-ctr {
   font-size: 30px;
   display: flex;
-  gap: 30px;
+  gap: 48px;
 }
+
+.temp-range {
+  text-align: center;
+}
+
+.temp-label,
+.sun-label {
+  font-size: 18px;
+}
+
+.temp {
+  display: flex;
+  /* font-size: inherit; */
+}
+
+/* .temp-unit {
+  font-size: 30px;
+} */
+
+/* .current-temp-unit {
+  font-size: 80px;
+} */
+
+.sun-outer-ctr {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sun-ctr {
+  text-align: center;
+}
+
+.sun-div {
+  content: "";
+  border: 1px dotted rgba(255, 255, 255, 0.5);
+  border-color: #000 transparent transparent transparent;
+  border-radius: 50%/50px 50px 0 0;
+  width: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 7px;
+}
+
+.sun-label {
+  height: 40px;
+  width: 40px;
+}
+
+.sunrise-time,
+.sunset-time {
+}
+
 .temp-min,
 .temp-max {
 }
-.temp-icon {
-  height: 80px;
-  width: 80px;
-}
 
 .location-input {
+  padding: 10px 30px;
 }
 .find-location-button {
+  padding: 10px 30px;
 }
