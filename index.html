@@ -11,51 +11,173 @@
   </head>
   <body>
     <div class="container">
-      <div class="current-date">Monday, January 1st</div>
-      <div class="current-time">12:00 PM</div>
-      <form>
-        <input type="text" placeholder="Enter City" class="location-input" />
-        <button class="find-location-button">Submit</button>
-      </form>
       <div class="content">
-        <div class="unit-buttons">
-          <button class="f-button">°F</button>
-          <button class="c-button">°C</button>
-        </div>
-        <div class="current-location">City</div>
-        <div class="description-ctr">
-          <div class="description"></div>
-          <img class="temp-icon" src="https://via.placeholder.com/80" />
-        </div>
-        <div class="temp">
-          <div class="current-temp">-°</div>
-          <!-- <div class="temp-unit"></div> -->
-        </div>
-        <div class="temp-range-ctr">
-          <div class="temp-range">
-            <div class="temp-label">Low</div>
-            <div class="temp">
-              <div class="temp-min">-°</div>
-              <!-- <div class="temp-unit"></div> -->
+        <div class="upper-content">
+          <form>
+            <div class="form-background">
+              <input
+                type="text"
+                placeholder="Enter City"
+                class="location-input"
+              />
+              <button class="find-location-button">
+                <img
+                  src="img/search30.png"
+                  alt="search icon"
+                  class="search-icon"
+                />
+              </button>
+            </div>
+          </form>
+
+          <div class="date">Monday 12/20</div>
+
+          <div class="local-time">The local time in (city) is 00:00 PM</div>
+
+          <div class="current-location">City Name</div>
+
+          <div class="description-ctr">
+            <div class="description">Partly cloudy</div>
+            <img class="temp-icon" src="https://via.placeholder.com/60" />
+          </div>
+
+          <div class="temp-ctr">
+            <div class="temp-range-content">
+              <div class="temp-range-label">Current Temperature</div>
+              <div class="current-temp">--.-° F</div>
+            </div>
+
+            <div class="temp-range-content">
+              <div class="temp-range-ctr">
+                <div class="temp-range-label">Average</div>
+                <div class="avgtemp">--.-° F</div>
+              </div>
+              <!-- </div> -->
+
+              <!-- <div class="temp-range-content"> -->
+              <div class="hl-ctr">
+                <div class="temp-range-ctr">
+                  <div class="temp-range-label">Low</div>
+                  <div class="mintemp">--.-° F</div>
+                </div>
+                <div class="temp-range-content">
+                  <div class="temp-range-label">High</div>
+                  <div class="maxtemp">--.-° F</div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="temp-range">
-            <div class="temp-label">High</div>
-            <div class="temp">
-              <div class="temp-max">-°</div>
-              <!-- <div class="temp-unit"></div> -->
+
+          <div class="feels-like">Feels like --.-° F</div>
+
+          <div class="weather-content">
+            <div class="avg-humidity">Humidity: 00%</div>
+            <div class="uv-index">UV: 0</div>
+
+            <div class="sun-outer-ctr">
+              <div class="sun-ctr">
+                <img
+                  src="img/sunrise64.png"
+                  alt="sunrise icon"
+                  class="sun-icon"
+                />
+                <div class="sunrise">00:00 AM</div>
+              </div>
+              <div class="sun-ctr">
+                <img
+                  src="img/sunset64.png"
+                  alt="sunset icon"
+                  class="sun-icon"
+                />
+                <div class="sunset">00:00 AM</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="sun-outer-ctr">
-          <div class="sun-ctr">
-            <img class="sun-label" src="sunrise.png" alt="Sunrise icon" />
-            <div class="sunrise-time">00:00 AM</div>
+
+        <div class="forecast-ctr">
+          <div class="forecast-2">
+            <div class="date-f2">Tuesday 12/21</div>
+
+            <div class="description-ctr">
+              <div class="description-f2">Rainstorms</div>
+              <img class="temp-icon-f2" src="https://via.placeholder.com/80" />
+            </div>
+
+            <div class="temp-range-ctr-f">
+              <div class="low-ctr-f">
+                <div class="low-label">Low</div>
+                <div class="mintemp-f2">L: --.-° F</div>
+              </div>
+              <div class="high-ctr-f">
+                <div class="high-label">High</div>
+                <div class="maxtemp-f2">H: --.-° F</div>
+              </div>
+            </div>
+            <div class="avgtemp-f2">--.-° F</div>
+            <div class="avg-humidity-f2">Humidity: 00%</div>
+            <div class="uv-index-f2">UV: 0</div>
+
+            <div class="sun-outer-ctr-f">
+              <div class="sun-ctr-f">
+                <img
+                  src="img/sunrise32.png"
+                  alt="sunrise icon"
+                  class="sun-icon-f"
+                />
+                <div class="sunrise-f2">00:00 AM</div>
+              </div>
+
+              <div class="sun-ctr-f">
+                <img
+                  src="img/sunset32.png"
+                  alt="sunset icon"
+                  class="sun-icon-f"
+                />
+                <div class="sunset-f2">00:00 AM</div>
+              </div>
+            </div>
           </div>
-          <div class="sun-div"></div>
-          <div class="sun-ctr">
-            <img class="sun-label" src="sunset.png" alt="Sunset icon" />
-            <div class="sunset-time">00:00 PM</div>
+          <div class="forecast-3">
+            <div class="date-f3">Wednesday 12/22</div>
+
+            <div class="description-ctr">
+              <div class="description-f3">Partially cloudy</div>
+              <img class="temp-icon-f3" src="https://via.placeholder.com/80" />
+            </div>
+
+            <div class="temp-range-ctr-f">
+              <div class="low-ctr-f">
+                <div class="low-label">Low</div>
+                <div class="mintemp-f3">L: --.-° F</div>
+              </div>
+              <div class="high-ctr-f">
+                <div class="high-label">High</div>
+                <div class="maxtemp-f3">H: --.-° F</div>
+              </div>
+            </div>
+            <div class="avgtemp-f3">--.-° F</div>
+            <div class="avg-humidity-f3">Humidity: 00%</div>
+            <div class="uv-index-f3">UV: 0</div>
+
+            <div class="sun-outer-ctr-f">
+              <div class="sun-ctr-f">
+                <img
+                  src="img/sunrise32.png"
+                  alt="sunrise icon"
+                  class="sun-icon-f"
+                />
+                <div class="sunrise-f3">00:00 AM</div>
+              </div>
+              <div class="sun-ctr-f">
+                <img
+                  src="img/sunset32.png"
+                  alt="sunset icon"
+                  class="sun-icon-f"
+                />
+                <div class="sunset-f3">00:00 AM</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

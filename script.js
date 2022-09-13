@@ -1,101 +1,126 @@
-const currentDate = document.querySelector(".current-date");
-const currentTime = document.querySelector(".current-time");
+// const currentDate = document.querySelector(".current-date");
+// const currentTime = document.querySelector(".current-time");
 const currentLocation = document.querySelector(".current-location");
 const temp = document.querySelector(".current-temp");
-const tempMin = document.querySelector(".temp-min");
-const tempMax = document.querySelector(".temp-max");
 const icon = document.querySelector(".temp-icon");
 const description = document.querySelector(".description");
 const locationForm = document.querySelector("form");
 let locationInput = document.querySelector(".location-input");
 const findLocationButton = document.querySelector(".find-location-button");
 
-const fButton = document.querySelector(".f-button");
-const cButton = document.querySelector(".c-button");
-// const tempUnit = document.querySelector(".temp-unit");
+// const fButton = document.querySelector(".f-button");
+// const cButton = document.querySelector(".c-button");
 
-const dateTimestamp = moment().format("dddd, MMMM Do");
-const timeTimestamp = moment().format("h:mm A");
+// const dateTimestamp = moment().format("dddd, MMMM Do");
+// const timeTimestamp = moment().format("h:mm A");
+const day1 = moment().format("dddd M/D");
+const day2 = moment().add(1, "days").format("dddd M/D");
+const day3 = moment().add(2, "days").format("dddd M/D");
 
-const sunriseTime = document.querySelector(".sunrise-time");
-const sunsetTime = document.querySelector(".sunset-time");
+const localTime = document.querySelector(".local-time");
 
-// const getFahrenheit = (num) => {
-//   const f = (num - 273.15) * 1.8 + 32;
-//   return Math.round(f * 10) / 10;
-// };
+const forecast = document.querySelector(".forecast-1");
+const date = document.querySelector(".date");
+const feelsLike = document.querySelector(".feels-like");
+const avgTemp = document.querySelector(".avgtemp");
+const minTemp = document.querySelector(".mintemp");
+const maxTemp = document.querySelector(".maxtemp");
+const sunrise = document.querySelector(".sunrise");
+const sunset = document.querySelector(".sunset");
+const avgHumidity = document.querySelector(".avg-humidity");
+const uvIndex = document.querySelector(".uv-index");
 
-// const getCelsius = (num) => {
-//   const c = num - 273.15;
-//   return Math.round(c * 10) / 10;
-// };
+const iconF2 = document.querySelector(".temp-icon-f2");
+const iconF3 = document.querySelector(".temp-icon-f3");
+
+const forecastTwo = document.querySelector(".forecast-2");
+const dateF2 = document.querySelector(".date-f2");
+const descriptionF2 = document.querySelector(".description-f2");
+const avgTempF2 = document.querySelector(".avgtemp-f2");
+const minTempF2 = document.querySelector(".mintemp-f2");
+const maxTempF2 = document.querySelector(".maxtemp-f2");
+const avgHumidityF2 = document.querySelector(".avg-humidity-f2");
+const uvIndexF2 = document.querySelector(".uv-index-f2");
+const sunriseF2 = document.querySelector(".sunrise-f2");
+const sunsetF2 = document.querySelector(".sunset-f2");
+
+const forecastThree = document.querySelector(".forecast-3");
+const dateF3 = document.querySelector(".date-f3");
+const descriptionF3 = document.querySelector(".description-f3");
+const avgTempF3 = document.querySelector(".avgtemp-f3");
+const minTempF3 = document.querySelector(".mintemp-f3");
+const maxTempF3 = document.querySelector(".maxtemp-f3");
+const avgHumidityF3 = document.querySelector(".avg-humidity-f3");
+const uvIndexF3 = document.querySelector(".uv-index-f3");
+const sunriseF3 = document.querySelector(".sunrise-f3");
+const sunsetF3 = document.querySelector(".sunset-f3");
+
+// currentDate.innerHTML = dateTimestamp;
+// currentTime.innerHTML = timeTimestamp;
 
 const renderWeatherData = (data) => {
-  currentDate.innerHTML = dateTimestamp;
-  currentTime.innerHTML = timeTimestamp;
-  currentLocation.innerHTML = data.name;
+  localTime.innerHTML = `The local time in ${data.location.name} is ${moment(
+    data.location.localtime
+  ).format("h:mm A")}`;
+  date.innerHTML = day1;
 
-  const changeUnit = (unit) => {
-    if (fButton.classList.contains("active")) {
-      unit === "F";
-    } else {
-      unit === "C";
-      fButton.classList.remove("active");
-      cButton.classList.add("active");
-    }
-    return unit;
-  };
+  currentLocation.innerHTML = data.location.name;
 
-  const mainT = data.main.temp;
-  const minT = data.main.temp_min;
-  const maxT = data.main.temp_max;
+  description.innerHTML = data.current.condition.text;
+  let currentIcon = data.current.condition.icon;
+  icon.src = currentIcon;
 
-  const newMainT = ((mainT - 32) * (5 / 9)).toFixed(2);
-  const newMinT = ((minT - 32) * (5 / 9)).toFixed(2);
-  const newMaxT = ((maxT - 32) * (5 / 9)).toFixed(2);
+  temp.innerHTML = `${data.current.temp_f}° F`;
 
-  console.log(`${newMainT}° C`);
+  feelsLike.innerHTML = `Feels like: ${data.current.feelslike_f}° F`;
 
-  // if (cButton.classList.contains("active")) {
-  //   temp.innerHTML = `${newMainT}° C`;
-  //   tempMin.innerHTML = `${newMinT}° C`;
-  //   tempMax.innerHTML = `${newMaxT}° C`;
-  // }
-  if (fButton.classList.contains("active")) {
-    temp.innerHTML = `${mainT}° F`;
-    tempMin.innerHTML = `${minT}° F`;
-    tempMax.innerHTML = `${maxT}° F`;
-  } else {
-    cButton.classList.add("active");
-    temp.innerHTML = `${newMainT}° C`;
-    tempMin.innerHTML = `${newMinT}° C`;
-    tempMax.innerHTML = `${newMaxT}° C`;
-  }
+  avgTemp.innerHTML = `${data.forecast.forecastday[0].day.avgtemp_f}° F`;
+  minTemp.innerHTML = `${data.forecast.forecastday[0].day.mintemp_f}° F`;
+  maxTemp.innerHTML = `${data.forecast.forecastday[0].day.maxtemp_f}° F`;
+  avgHumidity.innerHTML = `Humidity: ${data.forecast.forecastday[0].day.avghumidity}%`;
+  uvIndex.innerHTML = `UV: ${data.forecast.forecastday[0].day.uv}`;
+  sunrise.innerHTML = `${data.forecast.forecastday[0].astro.sunrise}`;
+  sunset.innerHTML = `${data.forecast.forecastday[0].astro.sunset}`;
 
-  const sunrise = data.sys.sunrise;
-  const sunset = data.sys.sunset;
+  dateF2.innerHTML = day2;
+  descriptionF2.innerHTML = data.forecast.forecastday[1].day.condition.text;
+  let f2Icon = data.forecast.forecastday[1].day.condition.icon;
+  iconF2.src = f2Icon;
+  avgTempF2.innerHTML = `Average ${data.forecast.forecastday[1].day.avgtemp_f}° F`;
+  minTempF2.innerHTML = `${data.forecast.forecastday[1].day.mintemp_f}° F`;
+  maxTempF2.innerHTML = `${data.forecast.forecastday[1].day.maxtemp_f}° F`;
+  avgHumidityF2.innerHTML = `Humidity: ${data.forecast.forecastday[1].day.avghumidity}%`;
+  uvIndexF2.innerHTML = `UV: ${data.forecast.forecastday[1].day.uv}`;
+  sunriseF2.innerHTML = `${data.forecast.forecastday[1].astro.sunrise}`;
+  sunsetF2.innerHTML = `${data.forecast.forecastday[1].astro.sunset}`;
 
-  console.log(sunrise, sunset);
-  console.log(data.timezone);
-
-  const srTime = moment.unix(sunrise).format("h:mm A");
-  console.log(moment.unix(sunrise));
-  const ssTime = moment.unix(sunset).format("h:mm A");
-  sunriseTime.innerHTML = srTime;
-  sunsetTime.innerHTML = ssTime;
-
-  console.log(srTime, ssTime);
-
-  let currentIcon = data.weather[0].icon;
-  icon.src = `http://openweathermap.org/img/wn/${currentIcon}@2x.png`;
-
-  description.innerHTML = data.weather[0].description;
+  dateF3.innerHTML = day3;
+  descriptionF3.innerHTML = data.forecast.forecastday[2].day.condition.text;
+  let f3Icon = data.forecast.forecastday[2].day.condition.icon;
+  iconF3.src = f3Icon;
+  avgTempF3.innerHTML = `Average: ${data.forecast.forecastday[2].day.avgtemp_f}° F`;
+  minTempF3.innerHTML = `${data.forecast.forecastday[2].day.mintemp_f}° F`;
+  maxTempF3.innerHTML = `${data.forecast.forecastday[2].day.maxtemp_f}° F`;
+  avgHumidityF3.innerHTML = `Humidity: ${data.forecast.forecastday[2].day.avghumidity}%`;
+  uvIndexF3.innerHTML = `UV: ${data.forecast.forecastday[2].day.uv}`;
+  sunriseF3.innerHTML = `${data.forecast.forecastday[2].astro.sunrise}`;
+  sunsetF3.innerHTML = `${data.forecast.forecastday[2].astro.sunset}`;
 };
 
-const fetchWeatherData = async (city) => {
+const fetchWeatherData = async (cityName) => {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "974ed41962msh1d60a3df392fcb6p16f858jsn4b85f384d9bd",
+      "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
+    }
+  };
+
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&&appid=c2e3fdc3e2e3cfbcbd7192df10c3a265`
+    `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${cityName}&days=3`,
+    options
   );
+
   if ((response.status = 200)) {
     const data = await response.json();
     console.log(data);
@@ -107,7 +132,6 @@ const fetchWeatherData = async (city) => {
 
 window.addEventListener("DOMContentLoaded", () => {
   fetchWeatherData("Los Angeles");
-  fButton.classList.add("active");
 });
 
 locationForm.addEventListener("submit", (e) => {
@@ -115,18 +139,27 @@ locationForm.addEventListener("submit", (e) => {
   if (locationInput.value.length === 0) {
     alert("Please enter city");
   } else {
-    city = locationInput.value;
-    fetchWeatherData(city);
+    cityName = locationInput.value;
+    console.log(cityName);
+    fetchWeatherData(cityName);
   }
   locationInput.value = "";
 });
 
-cButton.addEventListener("click", () => {
-  fButton.classList.remove("active");
-  cButton.classList.add("active");
-});
+// cButton.addEventListener("click", () => {
+//   fButton.classList.remove("active");
+//   cButton.classList.add("active");
 
-fButton.addEventListener("click", () => {
-  cButton.classList.remove("active");
-  fButton.classList.add("active");
-});
+//   console.log(temp.innerHTML);
+
+//   // fetchWeatherData("", "C");
+// });
+
+// fButton.addEventListener("click", () => {
+//   cButton.classList.remove("active");
+//   fButton.classList.add("active");
+
+//   console.log(temp.innerHTML);
+//   city = locationInput.value;
+//   fetchWeatherData(city);
+// });
