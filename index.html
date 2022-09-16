@@ -12,170 +12,611 @@
   <body>
     <div class="container">
       <div class="content">
-        <div class="upper-content">
-          <form>
-            <div class="form-background">
-              <input
-                type="text"
-                placeholder="Enter City"
-                class="location-input"
+        <form>
+          <div class="form-background">
+            <input
+              type="text"
+              placeholder="Enter City"
+              class="location-input"
+            />
+            <button class="find-location-button">
+              <img
+                src="img/search30.png"
+                alt="search icon"
+                class="search-icon"
               />
-              <button class="find-location-button">
-                <img
-                  src="img/search30.png"
-                  alt="search icon"
-                  class="search-icon"
-                />
-              </button>
-            </div>
-          </form>
+            </button>
+          </div>
+        </form>
 
+        <div class="upper-content">
           <div class="date">Monday 12/20</div>
-
-          <div class="local-time">The local time in (city) is 00:00 PM</div>
-
-          <div class="current-location">City Name</div>
-
-          <div class="description-ctr">
-            <div class="description">Partly cloudy</div>
-            <img class="temp-icon" src="https://via.placeholder.com/60" />
+          <img class="temp-icon" src="https://via.placeholder.com/60" />
+          <div class="city-time-ctr">
+            <div class="current-location">City Name</div>
+            <div class="local-time">(00:00 PM)</div>
           </div>
-
           <div class="temp-ctr">
-            <div class="temp-range-content">
-              <div class="temp-range-label">Current Temperature</div>
-              <div class="current-temp">--.-° F</div>
-            </div>
-
-            <div class="temp-range-content">
-              <div class="temp-range-ctr">
-                <div class="temp-range-label">Average</div>
-                <div class="avgtemp">--.-° F</div>
-              </div>
-              <!-- </div> -->
-
-              <!-- <div class="temp-range-content"> -->
-              <div class="hl-ctr">
-                <div class="temp-range-ctr">
-                  <div class="temp-range-label">Low</div>
-                  <div class="mintemp">--.-° F</div>
-                </div>
-                <div class="temp-range-content">
-                  <div class="temp-range-label">High</div>
-                  <div class="maxtemp">--.-° F</div>
+            <div class="t-ctr">
+              <div class="description">Partly cloudy</div>
+              <div class="t2">
+                <div class="current-temp">--.-° F</div>
+                <div class="hl-ctr">
+                  <div class="temp-range-ctr">
+                    <div class="temp-range-label">Low</div>
+                    <div class="mintemp">--.-° F</div>
+                  </div>
+                  <div class="temp-range-ctr">
+                    <div class="temp-range-label">High</div>
+                    <div class="maxtemp">--.-° F</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="feels-like">Feels like --.-° F</div>
-
-          <div class="weather-content">
-            <div class="avg-humidity">Humidity: 00%</div>
-            <div class="uv-index">UV: 0</div>
-
-            <div class="sun-outer-ctr">
-              <div class="sun-ctr">
-                <img
-                  src="img/sunrise64.png"
-                  alt="sunrise icon"
-                  class="sun-icon"
-                />
-                <div class="sunrise">00:00 AM</div>
-              </div>
-              <div class="sun-ctr">
-                <img
-                  src="img/sunset64.png"
-                  alt="sunset icon"
-                  class="sun-icon"
-                />
-                <div class="sunset">00:00 AM</div>
-              </div>
+          <div class="times-ctr">
+            <div class="time-ctr">
+              <div class="time-12a">00am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t12a"
+              />
+              <div class="time-temp-12a">00°</div>
             </div>
+            <div class="time-ctr">
+              <div class="time-1a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t1a"
+              />
+              <div class="time-temp-1a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-2a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t2a"
+              />
+              <div class="time-temp-2a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-3a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t3a"
+              />
+              <div class="time-temp-3a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-4a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t4a"
+              />
+              <div class="time-temp-4a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-5a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t5a"
+              />
+              <div class="time-temp-5a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-6a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t6a"
+              />
+              <div class="time-temp-6a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-7a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t7a"
+              />
+              <div class="time-temp-7a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-8a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t8a"
+              />
+              <div class="time-temp-8a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-9a">0am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t9a"
+              />
+              <div class="time-temp-9a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-10a">00am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t10a"
+              />
+              <div class="time-temp-10a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-11a">00am</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t11a"
+              />
+              <div class="time-temp-11a">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-12p">00pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t12p"
+              />
+              <div class="time-temp-12p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-1p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t1p"
+              />
+              <div class="time-temp-1p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-2p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t2p"
+              />
+              <div class="time-temp-2p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-3p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t3p"
+              />
+              <div class="time-temp-3p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-4p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t4p"
+              />
+              <div class="time-temp-4p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-5p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t5p"
+              />
+              <div class="time-temp-5p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-6p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t6p"
+              />
+              <div class="time-temp-6p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-7p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t7p"
+              />
+              <div class="time-temp-7p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-8p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t8p"
+              />
+              <div class="time-temp-8p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-9p">0pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t9p"
+              />
+              <div class="time-temp-9p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-10p">00pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t10p"
+              />
+              <div class="time-temp-10p">00°</div>
+            </div>
+            <div class="time-ctr">
+              <div class="time-11p">00pm</div>
+              <img
+                src="https://via.placeholder.com/20"
+                alt="temp icon"
+                class="t-icon temp-icon-t11p"
+              />
+              <div class="time-temp-11p">00°</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="weather-content">
+          <div class="weather-desc-ctr">
+            <img class="feels-like-img" src="img/feels-like.png" />
+            <div class="feels-like">--.-° F</div>
+          </div>
+
+          <div class="weather-desc-ctr">
+            <img class="uv-img" src="img/uv-index.png" />
+            <div class="uv-index">0</div>
+          </div>
+
+          <div class="weather-desc-ctr">
+            <img class="avg-humidity-img" src="img/humidity.png" />
+            <div class="avg-humidity">00%</div>
+          </div>
+
+          <div class="weather-desc-ctr">
+            <img src="img/sunrise1.png" alt="sunrise icon" class="sun-icon" />
+            <div class="sunrise">0:00 AM</div>
+          </div>
+
+          <div class="weather-desc-ctr">
+            <img src="img/sunset1.png" alt="sunset icon" class="sun-icon" />
+            <div class="sunset">0:00 AM</div>
           </div>
         </div>
 
         <div class="forecast-ctr">
           <div class="forecast-2">
-            <div class="date-f2">Tuesday 12/21</div>
-
-            <div class="description-ctr">
+            <div class="forecast-content">
+              <div class="description-ctr-f">
+                <div class="date-f2">Tuesday 12/21</div>
+                <img
+                  class="temp-icon-f2"
+                  src="https://via.placeholder.com/80"
+                />
+              </div>
               <div class="description-f2">Rainstorms</div>
-              <img class="temp-icon-f2" src="https://via.placeholder.com/80" />
+              <div class="it-ctr-f">
+                <div class="temp-label-f">Average</div>
+                <div class="avgtemp-f2">--° F</div>
+              </div>
+              <div class="lh-f">
+                <div class="it-ctr-f">
+                  <div class="temp-label-f">Low</div>
+                  <div class="mintemp-f2">--° F</div>
+                </div>
+                <div class="it-ctr-f">
+                  <div class="temp-label-f">High</div>
+                  <div class="maxtemp-f2">--° F</div>
+                </div>
+              </div>
+              <div class="weather-ctr-f">
+                <div class="weather-list">
+                  <div class="weather-desc-ctr-f">
+                    <img
+                      src="img/sunrise1.png"
+                      alt="sunrise icon"
+                      class="sun-icon-f"
+                    />
+                    <div class="sunrise-f2">0:00 AM</div>
+                  </div>
+                  <div class="weather-desc-ctr-f">
+                    <img
+                      src="img/sunset1.png"
+                      alt="sunset icon"
+                      class="sun-icon-f"
+                    />
+                    <div class="sunset-f2">0:00 AM</div>
+                  </div>
+                </div>
+                <div class="top-wd-ctr">
+                  <div class="wd-ctr">
+                    <div class="wd-img-ctr">
+                      <img class="avg-humidity-img-f" src="img/humidity.png" />
+                    </div>
+                    <div class="avg-humidity-f2">00%</div>
+                  </div>
+                  <div class="wd-ctr">
+                    <div class="wd-img-ctr">
+                      <img class="uv-img-f" src="img/uv-index.png" />
+                    </div>
+                    <div class="uv-index-f2">0</div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="temp-range-ctr-f">
-              <div class="low-ctr-f">
-                <div class="low-label">Low</div>
-                <div class="mintemp-f2">L: --.-° F</div>
+            <div class="times-ctr-f">
+              <div class="time-ctr-f">
+                <div class="f-time time-12a-f2">00am</div>
+                <div class="f-temp time-temp-12a-f2">00</div>
               </div>
-              <div class="high-ctr-f">
-                <div class="high-label">High</div>
-                <div class="maxtemp-f2">H: --.-° F</div>
+              <div class="time-ctr-f">
+                <div class="f-time time-1a-f2">0am</div>
+                <div class="f-temp time-temp-1a-f2">00</div>
               </div>
-            </div>
-            <div class="avgtemp-f2">--.-° F</div>
-            <div class="avg-humidity-f2">Humidity: 00%</div>
-            <div class="uv-index-f2">UV: 0</div>
-
-            <div class="sun-outer-ctr-f">
-              <div class="sun-ctr-f">
-                <img
-                  src="img/sunrise32.png"
-                  alt="sunrise icon"
-                  class="sun-icon-f"
-                />
-                <div class="sunrise-f2">00:00 AM</div>
+              <div class="time-ctr-f">
+                <div class="f-time time-2a-f2">0am</div>
+                <div class="f-temp time-temp-2a-f2">00</div>
               </div>
-
-              <div class="sun-ctr-f">
-                <img
-                  src="img/sunset32.png"
-                  alt="sunset icon"
-                  class="sun-icon-f"
-                />
-                <div class="sunset-f2">00:00 AM</div>
+              <div class="time-ctr-f">
+                <div class="f-time time-3a-f2">0am</div>
+                <div class="f-temp time-temp-3a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-4a-f2">0am</div>
+                <div class="f-temp time-temp-4a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-5a-f2">0am</div>
+                <div class="f-temp time-temp-5a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-6a-f2">0am</div>
+                <div class="f-temp time-temp-6a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-7a-f2">0am</div>
+                <div class="f-temp time-temp-7a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-8a-f2">0am</div>
+                <div class="f-temp time-temp-8a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-9a-f2">0am</div>
+                <div class="f-temp time-temp-9a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-10a-f2">00am</div>
+                <div class="f-temp time-temp-10a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-11a-f2">00am</div>
+                <div class="f-temp time-temp-11a-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-12p-f2">00pm</div>
+                <div class="f-temp time-temp-12p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-1p-f2">0pm</div>
+                <div class="f-temp time-temp-1p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-2p-f2">0pm</div>
+                <div class="f-temp time-temp-2p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-3p-f2">0pm</div>
+                <div class="f-temp time-temp-3p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-4p-f2">0pm</div>
+                <div class="f-temp time-temp-4p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-5p-f2">0pm</div>
+                <div class="f-temp time-temp-5p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-6p-f2">0pm</div>
+                <div class="f-temp time-temp-6p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-7p-f2">0pm</div>
+                <div class="f-temp time-temp-7p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-8p-f2">0pm</div>
+                <div class="f-temp time-temp-8p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-9p-f2">0pm</div>
+                <div class="f-temp time-temp-9p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-10p-f2">00pm</div>
+                <div class="f-temp time-temp-10p-f2">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-11p-f2">00pm</div>
+                <div class="f-temp time-temp-11p-f2">00</div>
               </div>
             </div>
           </div>
+
           <div class="forecast-3">
-            <div class="date-f3">Wednesday 12/22</div>
-
-            <div class="description-ctr">
-              <div class="description-f3">Partially cloudy</div>
-              <img class="temp-icon-f3" src="https://via.placeholder.com/80" />
-            </div>
-
-            <div class="temp-range-ctr-f">
-              <div class="low-ctr-f">
-                <div class="low-label">Low</div>
-                <div class="mintemp-f3">L: --.-° F</div>
-              </div>
-              <div class="high-ctr-f">
-                <div class="high-label">High</div>
-                <div class="maxtemp-f3">H: --.-° F</div>
-              </div>
-            </div>
-            <div class="avgtemp-f3">--.-° F</div>
-            <div class="avg-humidity-f3">Humidity: 00%</div>
-            <div class="uv-index-f3">UV: 0</div>
-
-            <div class="sun-outer-ctr-f">
-              <div class="sun-ctr-f">
+            <div class="forecast-content">
+              <div class="description-ctr-f">
+                <div class="date-f3">Wednesday 12/21</div>
                 <img
-                  src="img/sunrise32.png"
-                  alt="sunrise icon"
-                  class="sun-icon-f"
+                  class="temp-icon-f3"
+                  src="https://via.placeholder.com/80"
                 />
-                <div class="sunrise-f3">00:00 AM</div>
               </div>
-              <div class="sun-ctr-f">
-                <img
-                  src="img/sunset32.png"
-                  alt="sunset icon"
-                  class="sun-icon-f"
-                />
-                <div class="sunset-f3">00:00 AM</div>
+              <div class="description-f3">Partially Cloudy</div>
+              <div class="it-ctr-f">
+                <div class="temp-label-f">Average</div>
+                <div class="avgtemp-f3">--° F</div>
+              </div>
+              <div class="lh-f">
+                <div class="it-ctr-f">
+                  <div class="temp-label-f">Low</div>
+                  <div class="mintemp-f3">--° F</div>
+                </div>
+                <div class="it-ctr-f">
+                  <div class="temp-label-f">High</div>
+                  <div class="maxtemp-f3">--° F</div>
+                </div>
+              </div>
+              <div class="weather-ctr-f">
+                <div class="weather-list">
+                  <div class="weather-desc-ctr-f">
+                    <img
+                      src="img/sunrise1.png"
+                      alt="sunrise icon"
+                      class="sun-icon-f"
+                    />
+                    <div class="sunrise-f3">0:00 AM</div>
+                  </div>
+                  <div class="weather-desc-ctr-f">
+                    <img
+                      src="img/sunset1.png"
+                      alt="sunset icon"
+                      class="sun-icon-f"
+                    />
+                    <div class="sunset-f3">0:00 AM</div>
+                  </div>
+                </div>
+                <div class="top-wd-ctr">
+                  <div class="wd-ctr">
+                    <div class="wd-img-ctr">
+                      <img class="avg-humidity-img-f" src="img/humidity.png" />
+                    </div>
+                    <div class="avg-humidity-f3">00%</div>
+                  </div>
+                  <div class="wd-ctr">
+                    <div class="wd-img-ctr">
+                      <img class="uv-img-f" src="img/uv-index.png" />
+                    </div>
+                    <div class="uv-index-f3">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="times-ctr-f">
+              <div class="time-ctr-f">
+                <div class="f-time time-12a-f3">00am</div>
+                <div class="f-temp time-temp-12a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-1a-f3">0am</div>
+                <div class="f-temp time-temp-1a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-2a-f3">0am</div>
+                <div class="f-temp time-temp-2a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-3a-f3">0am</div>
+                <div class="f-temp time-temp-3a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-4a-f3">0am</div>
+                <div class="f-temp time-temp-4a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-5a-f3">0am</div>
+                <div class="f-temp time-temp-5a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-6a-f3">0am</div>
+                <div class="f-temp time-temp-6a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-7a-f3">0am</div>
+                <div class="f-temp time-temp-7a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-8a-f3">0am</div>
+                <div class="f-temp time-temp-8a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-9a-f3">0am</div>
+                <div class="f-temp time-temp-9a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-10a-f3">00am</div>
+                <div class="f-temp time-temp-10a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-11a-f3">00am</div>
+                <div class="f-temp time-temp-11a-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-12p-f3">00pm</div>
+                <div class="f-temp time-temp-12p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-1p-f3">0pm</div>
+                <div class="f-temp time-temp-1p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-2p-f3">0pm</div>
+                <div class="f-temp time-temp-2p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-3p-f3">0pm</div>
+                <div class="f-temp time-temp-3p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-4p-f3">0pm</div>
+                <div class="f-temp time-temp-4p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-5p-f3">0pm</div>
+                <div class="f-temp time-temp-5p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-6p-f3">0pm</div>
+                <div class="f-temp time-temp-6p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-7p-f3">0pm</div>
+                <div class="f-temp time-temp-7p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-8p-f3">0pm</div>
+                <div class="f-temp time-temp-8p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-9p-f3">0pm</div>
+                <div class="f-temp time-temp-9p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-10p-f3">00pm</div>
+                <div class="f-temp time-temp-10p-f3">00</div>
+              </div>
+              <div class="time-ctr-f">
+                <div class="f-time time-11p-f3">00pm</div>
+                <div class="f-temp time-temp-11p-f3">00</div>
               </div>
             </div>
           </div>
